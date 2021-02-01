@@ -143,13 +143,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.11" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1931" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="TinyMvvm" Version="2.4.14" />
+    <PackageReference Include="TinyMvvm.Forms" Version="2.4.14" />
+    <PackageReference Include="TinyMvvm.Autofac" Version="2.4.14" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FuelTrack\FuelTrack.csproj">
-      <Project>{CA67F1F6-8FEE-4902-BA7A-70D4475973B4}</Project>
+      <Project>{1684291E-1DFF-4329-A495-7300191BDCA7}</Project>
       <Name>FuelTrack</Name>
     </ProjectReference>
   </ItemGroup>

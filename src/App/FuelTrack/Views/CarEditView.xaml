@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvvm:ViewBase
+    x:Class="FuelTrack.Views.CarEditView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvvm="clr-namespace:TinyMvvm.Forms;assembly=TinyMvvm.Forms"
+    xmlns:resx="clr-namespace:FuelTrack.Resources"
+    xmlns:vm="clr-namespace:FuelTrack.ViewModels"
+    Title="{Binding Title}"
+    x:TypeArguments="vm:CarEditViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding SaveCommand}"
+            IconImageSource="save.png"
+            Text="{x:Static resx:Strings.ButtonSave}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelAlias}"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    Text="{Binding Alias}" />
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelVendor}"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    Text="{Binding Vendor}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelModel}"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    Text="{Binding Model}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelYear}"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    Keyboard="Numeric"
+                    Text="{Binding Year}" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelPlate}"
+                    VerticalOptions="Center" />
+                <Entry
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    Text="{Binding Plate}" />
+                <Label
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelFuelType}"
+                    VerticalOptions="Center" />
+                <Picker
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    FontSize="Small"
+                    ItemDisplayBinding="{Binding Text}"
+                    ItemsSource="{Binding FuelTypes}"
+                    SelectedItem="{Binding SelectedFuelType, Mode=TwoWay}" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Margin="0,0,15,0"
+                    FontSize="Medium"
+                    HorizontalTextAlignment="End"
+                    Text="{x:Static resx:Strings.LabelNote}" />
+                <Editor
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Margin="0,10,0,10"
+                    AutoSize="TextChanges"
+                    FontSize="Small"
+                    Text="{Binding Note}"
+                    TextColor="{DynamicResource PrimaryTextColor}" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</mvvm:ViewBase>

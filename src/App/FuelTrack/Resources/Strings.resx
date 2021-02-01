@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TitleApp" xml:space="preserve">
+    <value>FuelTrack</value>
+    <comment>App title</comment>
+  </data>
+  <data name="TitleHome" xml:space="preserve">
+    <value>Home</value>
+    <comment>Page title: Home</comment>
+  </data>
+  <data name="TitleOverview" xml:space="preserve">
+    <value>Overview</value>
+    <comment>Page title: Overview</comment>
+  </data>
+  <data name="TitleSettings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Page title: Settings</comment>
+  </data>
+  <data name="TitleCar" xml:space="preserve">
+    <value>Car</value>
+    <comment>Page title: Car</comment>
+  </data>
+  <data name="TitleCarAdd" xml:space="preserve">
+    <value>Add car</value>
+    <comment>Page title: Add car</comment>
+  </data>
+  <data name="TitleCarEdit" xml:space="preserve">
+    <value>Edit car</value>
+    <comment>Page title: Edit car</comment>
+  </data>
+  <data name="TitleFuelUp" xml:space="preserve">
+    <value>Fuel up</value>
+    <comment>Page title: Fuel up</comment>
+  </data>
+  <data name="TitleFuelUpAdd" xml:space="preserve">
+    <value>Add fuel up</value>
+    <comment>Page title: Add fuel up</comment>
+  </data>
+  <data name="TitleFuelUpEdit" xml:space="preserve">
+    <value>Edit fuel up</value>
+    <comment>Page title: Edit fuel up</comment>
+  </data>
+  <data name="ButtonSettings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>Button: Settings</comment>
+  </data>
+  <data name="ButtonRefresh" xml:space="preserve">
+    <value>Refresh</value>
+    <comment>Button: Refresh</comment>
+  </data>
+  <data name="ButtonAdd" xml:space="preserve">
+    <value>Add</value>
+    <comment>Button: Add</comment>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Button: Edit</comment>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Button: Delete</comment>
+  </data>
+  <data name="ButtonSave" xml:space="preserve">
+    <value>Save</value>
+    <comment>Button: Save</comment>
+  </data>
+  <data name="ButtonCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Button: Cancel</comment>
+  </data>
+  <data name="ButtonCarAdd" xml:space="preserve">
+    <value>Add car</value>
+    <comment>Button: Add car</comment>
+  </data>
+  <data name="ButtonCarEdit" xml:space="preserve">
+    <value>Edit car</value>
+    <comment>Button: Edit car</comment>
+  </data>
+  <data name="ButtonCarDelete" xml:space="preserve">
+    <value>Delete car</value>
+    <comment>Button: Delete car</comment>
+  </data>
+  <data name="ButtonFuelUpAdd" xml:space="preserve">
+    <value>Add fuel up</value>
+    <comment>Button: Add fuel up</comment>
+  </data>
+  <data name="ButtonFuelUpEdit" xml:space="preserve">
+    <value>Edit fuel up</value>
+    <comment>Button: Edit fuel up</comment>
+  </data>
+  <data name="ButtonFuelUpDelete" xml:space="preserve">
+    <value>Delete fuel up</value>
+    <comment>Button: Delete fuel up</comment>
+  </data>
+  <data name="HeaderAppearance" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Header: Appearance</comment>
+  </data>
+  <data name="HeaderUnits" xml:space="preserve">
+    <value>Units</value>
+    <comment>Header: Units</comment>
+  </data>
+  <data name="LabelTheme" xml:space="preserve">
+    <value>Theme</value>
+    <comment>Label: Theme</comment>
+  </data>
+  <data name="LabelDistance" xml:space="preserve">
+    <value>Distance: </value>
+    <comment>Label: Distance</comment>
+  </data>
+  <data name="LabelFuel" xml:space="preserve">
+    <value>Fuel</value>
+    <comment>Label: Fuel</comment>
+  </data>
+  <data name="LabelCar" xml:space="preserve">
+    <value>Car: </value>
+    <comment>Label: Car</comment>
+  </data>
+  <data name="LabelAlias" xml:space="preserve">
+    <value>Alias: </value>
+    <comment>Label: Alias</comment>
+  </data>
+  <data name="LabelVendor" xml:space="preserve">
+    <value>Vendor: </value>
+    <comment>Label: Vendor</comment>
+  </data>
+  <data name="LabelModel" xml:space="preserve">
+    <value>Model: </value>
+    <comment>Label: Model</comment>
+  </data>
+  <data name="LabelYear" xml:space="preserve">
+    <value>Year: </value>
+    <comment>Label: Year</comment>
+  </data>
+  <data name="LabelPlate" xml:space="preserve">
+    <value>Plate: </value>
+    <comment>Label: Plate</comment>
+  </data>
+  <data name="LabelFuelType" xml:space="preserve">
+    <value>Fuel Type: </value>
+    <comment>Label: Fuel Type</comment>
+  </data>
+  <data name="LabelNote" xml:space="preserve">
+    <value>Note: </value>
+    <comment>Label: Note</comment>
+  </data>
+  <data name="LabelDate" xml:space="preserve">
+    <value>Date: </value>
+    <comment>Label: Date</comment>
+  </data>
+  <data name="LabelTime" xml:space="preserve">
+    <value>Time: </value>
+    <comment>Label: Time</comment>
+  </data>
+  <data name="LabelQuantity" xml:space="preserve">
+    <value>Quantity: </value>
+    <comment>Label: Quantity</comment>
+  </data>
+  <data name="LabelAmount" xml:space="preserve">
+    <value>Amount: </value>
+    <comment>Label: Amount</comment>
+  </data>
+  <data name="LabelPartial" xml:space="preserve">
+    <value>Partial</value>
+    <comment>Label: Partial</comment>
+  </data>
+  <data name="OptionThemeDefault" xml:space="preserve">
+    <value>System default</value>
+    <comment>Option: Default theme</comment>
+  </data>
+  <data name="OptionThemeLight" xml:space="preserve">
+    <value>Light</value>
+    <comment>Option: Light theme</comment>
+  </data>
+  <data name="OptionThemeDark" xml:space="preserve">
+    <value>Dark</value>
+    <comment>Option: Dark theme</comment>
+  </data>
+  <data name="OptionUnitDistanceKilometers" xml:space="preserve">
+    <value>Kilometers (km)</value>
+    <comment>Option: Unit-distance kilometers</comment>
+  </data>
+  <data name="OptionUnitDistanceMiles" xml:space="preserve">
+    <value>Miles (mi)</value>
+    <comment>Option: Unit-distance miles</comment>
+  </data>
+  <data name="OptionUnitFuelLiters" xml:space="preserve">
+    <value>Liters (l)</value>
+    <comment>Option: Unit-fuel liters</comment>
+  </data>
+  <data name="OptionUnitFuelGallons" xml:space="preserve">
+    <value>Gallons (g)</value>
+    <comment>Option: Unit-fuel gallons</comment>
+  </data>
+  <data name="OptionUnitFuelKilowattHours" xml:space="preserve">
+    <value>Kilowatt/Hours (kWh)</value>
+    <comment>Option: Unit-fuel kilowatt/hours</comment>
+  </data>
+  <data name="OptionFuelTypeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>Option: Unknown fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeGasoline" xml:space="preserve">
+    <value>Gasoline</value>
+    <comment>Option: Gasoline fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeDiesel" xml:space="preserve">
+    <value>Diesel</value>
+    <comment>Option: Diesel fuel type</comment>
+  </data>
+  <data name="OptionFuelTypePetroleum" xml:space="preserve">
+    <value>Liquified Petroleum</value>
+    <comment>Option: Petroleum fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeNaturalGas" xml:space="preserve">
+    <value>Compressed Natural Gas</value>
+    <comment>Option: Natural Gas fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeEthanol" xml:space="preserve">
+    <value>Ethanol</value>
+    <comment>Option: Ethanol fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeBioDiesel" xml:space="preserve">
+    <value>Bio-diesel</value>
+    <comment>Option: Bio-diesel fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeHydrogen" xml:space="preserve">
+    <value>Hydrogen</value>
+    <comment>Option: Hydrogen fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeElectricity" xml:space="preserve">
+    <value>Electricity</value>
+    <comment>Option: Electricity fuel type</comment>
+  </data>
+  <data name="OptionFuelTypeOther" xml:space="preserve">
+    <value>Other</value>
+    <comment>Option: Other fuel type</comment>
+  </data>
+  <data name="MessageEmptyCars" xml:space="preserve">
+    <value>Empty car list, add a new one -&gt;</value>
+    <comment>Message: Empty car list</comment>
+  </data>
+</root>

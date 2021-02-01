@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvvm:ViewBase
+    x:Class="FuelTrack.Views.SettingsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvvm="clr-namespace:TinyMvvm.Forms;assembly=TinyMvvm.Forms"
+    xmlns:resx="clr-namespace:FuelTrack.Resources"
+    xmlns:vm="clr-namespace:FuelTrack.ViewModels"
+    Title="{x:Static resx:Strings.TitleSettings}"
+    x:TypeArguments="vm:SettingsViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="{x:Static resx:Strings.HeaderAppearance}">
+                    <ViewCell>
+                        <Grid Padding="20,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*" />
+                                <ColumnDefinition Width="60*" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Column="0"
+                                Text="{x:Static resx:Strings.LabelTheme}"
+                                VerticalOptions="Center" />
+                            <Picker
+                                Grid.Column="1"
+                                HorizontalOptions="FillAndExpand"
+                                ItemDisplayBinding="{Binding Text}"
+                                ItemsSource="{Binding Themes}"
+                                SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="{x:Static resx:Strings.HeaderUnits}">
+                    <ViewCell>
+                        <Grid Padding="20,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*" />
+                                <ColumnDefinition Width="60*" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Column="0"
+                                Text="{x:Static resx:Strings.LabelDistance}"
+                                VerticalOptions="Center" />
+                            <Picker
+                                Grid.Column="1"
+                                HorizontalOptions="FillAndExpand"
+                                ItemDisplayBinding="{Binding Text}"
+                                ItemsSource="{Binding DistanceUnits}"
+                                SelectedItem="{Binding SelectedDistanceUnit, Mode=TwoWay}" />
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid Padding="20,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*" />
+                                <ColumnDefinition Width="60*" />
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Grid.Column="0"
+                                Text="{x:Static resx:Strings.LabelFuel}"
+                                VerticalOptions="Center" />
+                            <Picker
+                                Grid.Column="1"
+                                HorizontalOptions="FillAndExpand"
+                                ItemDisplayBinding="{Binding Text}"
+                                ItemsSource="{Binding FuelUnits}"
+                                SelectedItem="{Binding SelectedFuelUnit, Mode=TwoWay}" />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</mvvm:ViewBase>

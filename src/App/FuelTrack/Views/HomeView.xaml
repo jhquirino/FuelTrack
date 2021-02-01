@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvvm:ViewBase
+    x:Class="FuelTrack.Views.HomeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvvm="clr-namespace:TinyMvvm.Forms;assembly=TinyMvvm.Forms"
+    xmlns:resx="clr-namespace:FuelTrack.Resources"
+    xmlns:vm="clr-namespace:FuelTrack.ViewModels"
+    Title="{x:Static resx:Strings.TitleHome}"
+    x:TypeArguments="vm:HomeViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding NavigateTo}"
+            CommandParameter="SettingsView"
+            IconImageSource="settings.png"
+            IsEnabled="{Binding IsNotBusy}"
+            Text="{x:Static resx:Strings.ButtonSettings}" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="35*" />
+                <RowDefinition Height="65*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="10,10,10,10"
+                Padding="10,0,10,0"
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    IsVisible="{Binding HasCars}"
+                    Text="{x:Static resx:Strings.LabelCar}"
+                    VerticalTextAlignment="Center" />
+                <Picker
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsNotBusy}"
+                    IsVisible="{Binding HasCars}"
+                    ItemDisplayBinding="{Binding Text}"
+                    ItemsSource="{Binding Cars}"
+                    SelectedItem="{Binding SelectedCar}" />
+                <Label
+                    FontSize="Small"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="End"
+                    IsVisible="False"
+                    Text="{x:Static resx:Strings.MessageEmptyCars}"
+                    TextColor="{DynamicResource Gray1}"
+                    VerticalTextAlignment="Center">
+                    <Label.Triggers>
+                        <DataTrigger
+                            Binding="{Binding HasCars}"
+                            TargetType="Label"
+                            Value="False">
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <ImageButton
+                    Padding="8"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    Command="{Binding NavigateTo}"
+                    CommandParameter="CarEditView"
+                    CornerRadius="20"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding IsNotBusy}"
+                    Source="car_add.png"
+                    VerticalOptions="Center"
+                    WidthRequest="40">
+                    <ImageButton.Triggers>
+                        <DataTrigger
+                            Binding="{Binding IsBusy}"
+                            TargetType="ImageButton"
+                            Value="True">
+                            <Setter Property="BackgroundColor" Value="{DynamicResource Gray1}" />
+                        </DataTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+            </StackLayout>
+            <ActivityIndicator
+                Grid.Row="1"
+                Grid.RowSpan="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="Center" />
+            <Frame
+                Grid.Row="1"
+                Grid.RowSpan="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BackgroundColor="{DynamicResource Gray1}"
+                IsVisible="{Binding IsNotBusy}">
+                <Frame.Triggers>
+                    <DataTrigger
+                        Binding="{Binding IsLandscape}"
+                        TargetType="Frame"
+                        Value="True">
+                        <Setter Property="Grid.Row" Value="1" />
+                        <Setter Property="Grid.RowSpan" Value="2" />
+                        <Setter Property="Grid.Column" Value="0" />
+                        <Setter Property="Grid.ColumnSpan" Value="1" />
+                    </DataTrigger>
+                </Frame.Triggers>
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Chart goes here!"
+                    VerticalOptions="CenterAndExpand" />
+            </Frame>
+            <Frame
+                Grid.Row="2"
+                Grid.RowSpan="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                BackgroundColor="{DynamicResource Gray3}"
+                IsVisible="{Binding IsNotBusy}">
+                <Frame.Triggers>
+                    <DataTrigger
+                        Binding="{Binding IsLandscape}"
+                        TargetType="Frame"
+                        Value="True">
+                        <Setter Property="Grid.Row" Value="1" />
+                        <Setter Property="Grid.RowSpan" Value="2" />
+                        <Setter Property="Grid.Column" Value="1" />
+                        <Setter Property="Grid.ColumnSpan" Value="1" />
+                    </DataTrigger>
+                </Frame.Triggers>
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Statistics go here!"
+                    VerticalOptions="CenterAndExpand" />
+            </Frame>
+            <Frame
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="2"
+                Margin="16"
+                Padding="0"
+                BackgroundColor="{DynamicResource SecondaryColor}"
+                CornerRadius="28"
+                HasShadow="True"
+                HeightRequest="56"
+                HorizontalOptions="End"
+                IsClippedToBounds="True"
+                IsVisible="{Binding HasCars}"
+                VerticalOptions="End"
+                WidthRequest="56">
+                <ImageButton
+                    Padding="16"
+                    BackgroundColor="{DynamicResource SecondaryColor}"
+                    Command="{Binding AddFuelUpCommand}"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="{Binding IsNotBusy}"
+                    Source="fuel.png"
+                    VerticalOptions="FillAndExpand">
+                    <ImageButton.Triggers>
+                        <DataTrigger
+                            Binding="{Binding IsBusy}"
+                            TargetType="ImageButton"
+                            Value="True">
+                            <Setter Property="BackgroundColor" Value="{DynamicResource Gray1}" />
+                        </DataTrigger>
+                    </ImageButton.Triggers>
+                </ImageButton>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</mvvm:ViewBase>

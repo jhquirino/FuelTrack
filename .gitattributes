@@ -1,0 +1,45 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Windows forced line-endings
+*.git* text eol=crlf
+*.editorconfig text eol=crlf
+*.md text eol=crlf
+*.sln text eol=crlf
+*.csproj text eol=crlf
+*.props text eol=crlf
+*.cs text eol=crlf
+*.xaml text eol=crlf
+*.resx text eol=crlf
+*.xml text eol=crlf
+*.json text eol=crlf
+*.svg text eol=crlf
+
+#
+## These files are binary and should be left untouched
+#
+
+# (binary is a macro for -text -diff)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.pyc binary
+*.pdf binary
+*.ez binary
+*.bz2 binary
+*.swp binary
